@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/<SET_MYSQL_DATABASE_HERE>
+    username: <SET_MYSQL_USERNAME_HERE>
+    password: <SET_MYSQL_PASSWORD_HERE>
+    hikari:
+      minimum-idle: 50
+      maximum-pool-size: 200
+  jpa:
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: <SET_EMAIL_HOST_HERE>
+    username: <SET_EMAIL_USERNAME_HERE>
+    password: <SET_EMAIL_PASSWORD_HERE>
+    port: 587
+    properties:
+      mail:
+        smtp:
+          socketFactoryClass: javax.net.ssl.SSLSocketFactory
+        debug: true
+  jackson:
+    default-property-inclusion: non_empty
+secret: <SET_SECRET_HERE>
+async:
+  core-pool-size: 50
+  maximum-pool-size: 200
+  keep-alive-time: 60
